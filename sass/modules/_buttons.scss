@@ -1,0 +1,63 @@
+/*-------------------------------------------------------*\
+    Buttons
+/*-------------------------------------------------------*/
+
+%button {
+
+    display: inline-block;
+    padding: 8px 40px;
+    margin-bottom: 1rem; 
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase; 
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+
+}
+
+%button-hover {
+
+    outline: 0;
+    text-decoration: none;
+
+}
+
+.primary-button {
+
+    @extend %button;
+    color: #fff;
+    border: 2px solid #fff;
+
+    &:hover,
+    &:focus {
+
+        @extend %button-hover;
+        color: $primary-color;
+        background: #fff;
+
+    }
+
+}
+
+.secondary-button {
+
+    @extend %button;
+    color: #222;
+    border: 2px solid #222;
+
+    &:hover,
+    &:focus {
+
+        @extend %button-hover;
+        color: #fff;
+        background: #222;
+
+    }
+
+}   

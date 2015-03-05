@@ -1,0 +1,21 @@
+/*-------------------------------------------------------*\
+    Functions
+/*-------------------------------------------------------*/
+
+//calc grid width
+$grid-width: $columns * $column-width + ($columns - 1) * $gutter-width;
+
+//calc percentage
+@function percentage($size, $width) {
+
+  @return $size / $width * 100%;
+
+}
+
+//calc column width
+@function column($value) {
+
+  $width: $value * $column-width + ($value - 1) * $gutter-width;
+  @return percentage($width, $grid-width);
+  
+}

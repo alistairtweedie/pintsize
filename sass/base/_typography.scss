@@ -1,0 +1,146 @@
+/*-------------------------------------------------------*\
+    Typography
+/*-------------------------------------------------------*/
+
+h1 {
+
+    font-size: 54px;
+    font-size: 5.4rem;
+    line-height: 1.333;
+    margin-top: 48px;
+    margin-top: 4.8rem;
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+
+}
+
+h2 {
+
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 1.333;
+    margin-top: 48px;
+    margin-top: 4.8rem;
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+
+}
+
+
+h3 {
+
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 1; 
+    margin-top: 24px;
+    margin-top: 2.4rem;
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+
+}
+
+h4 {
+
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.105; 
+    margin-top: 21px;
+    margin-top: 2.1rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+
+}
+
+h5 {
+
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.105; 
+    margin-top: 21px;
+    margin-top: 2.1rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+
+}
+
+
+h6 {
+
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.105; 
+    margin-top: 21px;
+    margin-top: 2.1rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+
+}
+
+p, ul, ol, pre, table, blockquote {
+
+    margin-top: 21px;
+    margin-top: 2.1rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+
+    @include break-at(640px){
+
+        margin-top: 24px;
+        margin-top: 2.4rem;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+
+    }
+
+    @include break-at(1000px){
+
+        margin-top: 30px;
+        margin-top: 3rem;
+        margin-bottom: 30px;
+        margin-bottom: 3rem;
+
+    }
+
+}
+
+p, ul, ol, pre, table, blockquote {
+
+    margin-top: 21px;
+    margin-top: 2.1rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+
+}    
+
+
+hr {
+
+    border: 0;
+    height: 0;
+    border-top: 0;
+    border-bottom: 1px solid rgba(233, 233, 233, 1);
+
+}
+ul ul, ol ol, ul ol, ol ul {
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+b, strong, em, small, code {
+
+    line-height: 1;
+
+}
+sup, sub {
+
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+
+}
+sub {
+
+    top: 0.4em;
+
+}
