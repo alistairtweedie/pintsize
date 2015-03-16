@@ -2,28 +2,40 @@
 Sass front end boilerplate
 
 
-##Install
+##Get started
+It's easy to get started. Just follow the steps below.
+
+
+###1.Download
+
+Download Pintsize or clone the repo
+
+	$ git clone https://github.com/alistairtweedie/pintsize.git
+
+
+###2. Install
+
+Run Node Package Manager
 
 	$ npm install
 
-##Build
+
+###3. Configure
+
+Enter the pixel grid values used in your artwork in _variables.scss file. Done!
+
+	$columns: 12;
+    $column-width: 65px;
+    $gutter-width: 20px;
+
+
+###4. Build
+
+Run Gulp
 
 	$ gulp
 
-##Grid Usage
-
-	.content {
-
-		@include columns(6);
-
-	}
-
-	.sidebar {
-
-		// Last column in a row must have omega
-		@include columns(6, omega)
-
-	}
+	    	
 
  
 ## License
