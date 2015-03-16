@@ -24,34 +24,6 @@
 
 }
 
-// columns set up
-@mixin columns($columns, $omega:false) {
-
-  float: left;
-  width: column($columns);
-  
-  @if $omega == omega {
-
-    margin-right: 0;
-    
-  }
-
-  @else {
-    
-      margin-right: percentage($gutter-width, $grid-width);
-    
-  }
-  
-}
-
-// push
-@mixin push($columns) {
-
-	$margin: column($columns) + percentage($gutter-width, $grid-width);
-	margin-left: $margin;
-
-}
-
 /*	Breakpoints
 -------------------------------------------------------*/ 
 
