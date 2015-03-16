@@ -14,8 +14,20 @@ body {
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     background: #fff;
-    color: #222;
-    font-size: 16px;
+    color: $secondary-color;
+    font-size: 14px;
+
+    @include break-at(640px) {
+
+        font-size: 16px;
+
+    }
+
+    @include break-at(1200px) {
+
+        font-size: 19px
+
+    }
 
 }
 img {

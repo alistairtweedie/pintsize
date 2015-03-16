@@ -26,11 +26,9 @@ input[type="password"],
 textarea,
 select {
 
-    height: 38px;
-    padding: 6px 10px; 
+    padding: 9px 10px; 
     background-color: #fff;
     border: 1px solid #D1D1D1;
-    border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box;
 
@@ -68,7 +66,7 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
 
-    border: 1px solid #33C3F0;
+    border: 1px solid $primary-color;
     outline: 0;
 
 }
@@ -92,6 +90,7 @@ input[type="checkbox"],
 input[type="radio"] {
 
     display: inline;
+    margin-right: .5em;
 
 }
 label > .label-body {

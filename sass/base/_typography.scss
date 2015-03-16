@@ -2,44 +2,82 @@
     Typography
 /*-------------------------------------------------------*/
 
+// Default - Scale is 3:4 perfect fourth
+// 550px > - Scale is 2:3 perfect fifth
+
 h1 {
 
-    font-size: 54px;
-    font-size: 5.4rem;
-    line-height: 1.333;
-    margin-top: 48px;
-    margin-top: 4.8rem;
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
+    font-size: 33px;
+    font-size: 3.3rem;
+    line-height: 1.273;
+    margin-top: 42px;
+    margin-top: 4.2rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+
+    @include break-at(640px) {
+
+        font-size: 54px;
+        font-size: 5.4rem;
+        line-height: 1.333;
+        margin-top: 48px;
+        margin-top: 4.8rem;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+
+    }
+
+    @include break-at(1200px){
+
+        font-size: 64px;
+        font-size: 6.4rem;
+        line-height: 1.406; 
+        margin-top: 60px;
+        margin-top: 6rem;
+        margin-bottom: 30px;
+        margin-bottom: 3rem;
+
+    }
 
 }
 
 h2 {
 
-    font-size: 36px;
-    font-size: 3.6rem;
-    line-height: 1.333;
-    margin-top: 48px;
-    margin-top: 4.8rem;
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
+    font-size: 25px;
+    font-size: 2.5rem;
+    line-height: 1.680;
+    margin-top: 42px;
+    margin-top: 4.2rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+
+    @include break-at(640px){
+
+        font-size: 36px;
+        font-size: 3.6rem;
+        line-height: 1.333;
+        margin-top: 48px;
+        margin-top: 4.8rem;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+
+    }
+
+    @include break-at(1200px){
+
+        font-size: 43px;
+        font-size: 4.3rem;
+        line-height: 1.395;
+        margin-top: 60px;
+        margin-top: 6rem;
+        margin-bottom: 30px;
+        margin-bottom: 3rem;
+
+    }
 
 }
-
 
 h3 {
-
-    font-size: 24px;
-    font-size: 2.4rem;
-    line-height: 1; 
-    margin-top: 24px;
-    margin-top: 2.4rem;
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
-
-}
-
-h4 {
 
     font-size: 19px;
     font-size: 1.9rem;
@@ -48,6 +86,66 @@ h4 {
     margin-top: 2.1rem;
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
+
+    @include break-at(640px){
+
+        font-size: 24px;
+        font-size: 2.4rem;
+        line-height: 1; 
+        margin-top: 24px;
+        margin-top: 2.4rem;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+
+    }
+
+    @include break-at(1200px){
+
+        font-size: 29px;
+        font-size: 2.9rem;
+        line-height: 1.034;
+        margin-top: 30px;
+        margin-top: 3rem;
+        margin-bottom: 30px;
+        margin-bottom: 3rem;
+
+    }
+}
+
+h4 {
+
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.105;
+    margin-top: 21px;
+    margin-top: 2.1rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+
+    @include break-at(640px){
+
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.105; 
+        margin-top: 21px;
+        margin-top: 2.1rem;
+        margin-bottom: 21px;
+        margin-bottom: 2.1rem;
+
+    }
+
+    @include break-at(1200px){
+
+        font-size: 24px;
+        font-size: 2.4rem;
+        line-height: 24px;
+        line-height: 2.4rem;
+        margin-top: 24px;
+        margin-top: 2.4rem;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+
+    }
 
 }
 
@@ -61,6 +159,30 @@ h5 {
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
 
+    @include break-at(640px){
+
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.105; 
+        margin-top: 21px;
+        margin-top: 2.1rem;
+        margin-bottom: 21px;
+        margin-bottom: 2.1rem;
+
+    }
+
+    @include break-at(1200px){
+
+        font-size: 24px;
+        font-size: 2.4rem;
+        line-height: 1; 
+        margin-top: 24px;
+        margin-top: 2.4rem;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+
+    }
+
 }
 
 
@@ -73,6 +195,30 @@ h6 {
     margin-top: 2.1rem;
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
+
+    @include break-at(640px){
+
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.105; 
+        margin-top: 21px;
+        margin-top: 2.1rem;
+        margin-bottom: 21px;
+        margin-bottom: 2.1rem;
+
+    }
+
+    @include break-at(1200px){
+
+        font-size: 24px;
+        font-size: 2.4rem;
+        line-height: 1; 
+        margin-top: 24px;
+        margin-top: 2.4rem;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+
+    }
 
 }
 

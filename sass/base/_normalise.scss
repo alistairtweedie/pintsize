@@ -305,6 +305,14 @@ input[type="submit"] {
 button[disabled],
 html input[disabled] {
   cursor: default;
+  opacity: 0.3;
+
+  &:hover {
+
+    background-color: transparent;
+    color: inherit;
+
+  }
 }
 
 /**
