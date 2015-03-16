@@ -1,10 +1,16 @@
 /*-------------------------------------------------------*\
+    Modernizr
+/*-------------------------------------------------------*/
+
+if(!Modernizr.svg) {
+
+    $('img[src*="svg"]').attr('src', function() {
+        return $(this).attr('src').replace('.svg', '.png');
+    });
+
+}
+
+
+/*-------------------------------------------------------*\
     Main
 /*-------------------------------------------------------*/
-window.console && window.console.info("Like what you see? This is still in development.");
-
-
-$(document).ready(function() {
-
-
-});
