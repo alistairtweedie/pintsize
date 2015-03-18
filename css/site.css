@@ -18,6 +18,10 @@
 /*-------------------------------------------------------*\
     Mixins
 /*-------------------------------------------------------*/
+/*	Column width
+-------------------------------------------------------*/
+/*	Column push
+-------------------------------------------------------*/
 /*	Clearfix
 -------------------------------------------------------*/
 /*	Breakpoints
@@ -371,7 +375,7 @@ body {
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   background: #fff;
-  color: #222222;
+  color: #444444;
   font-size: 14px; }
   @media (min-width: 640px) {
     body {
@@ -387,6 +391,17 @@ img {
 /*-------------------------------------------------------*\
     Grid
 /*-------------------------------------------------------*/
+.section {
+  padding: 4rem 0;
+  text-align: center; }
+  @media (min-width: 640px) {
+    .section {
+      padding: 5rem 0;
+      text-align: left; } }
+  @media (min-width: 1200px) {
+    .section {
+      padding: 5rem 0 9rem 0; } }
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -684,7 +699,7 @@ sub {
 /*-------------------------------------------------------*\
     Buttons
 /*-------------------------------------------------------*/
-.primary-button, .secondary-button {
+.primary-button {
   display: inline-block;
   padding: 8px 40px;
   margin-bottom: 1rem;
@@ -702,21 +717,14 @@ sub {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.primary-button:hover, .primary-button:focus, .secondary-button:hover, .secondary-button:focus {
+.primary-button:hover, .primary-button:focus {
   outline: 0;
   text-decoration: none; }
 
 .primary-button {
-  color: #fff;
-  border: 2px solid #fff; }
-  .primary-button:hover, .primary-button:focus {
-    color: #ff9c08;
-    background: #fff; }
-
-.secondary-button {
   color: #222;
   border: 2px solid #222; }
-  .secondary-button:hover, .secondary-button:focus {
+  .primary-button:hover, .primary-button:focus {
     color: #fff;
     background: #222; }
 

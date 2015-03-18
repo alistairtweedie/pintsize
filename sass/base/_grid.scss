@@ -2,68 +2,97 @@
     Grid
 /*-------------------------------------------------------*/
 
-.container {
+$advanced-usage: false !default;
 
-    max-width: $grid-width;
-    margin: 0 auto;
-    padding: 0 1em;
-
-}
-
-.row {
-
-    @include clearfix();
-
-}
+@if $advanced-usage == false {
 
 
-.col {
-    margin-bottom: 1em;
-    float: left;
-}
-.col:last-child {
-    margin-right: 0;
-}
+.section {
 
-%full-width {
+    padding: 4rem 0;
+    text-align: center;
 
-    width: 100%;
+    @include break-at(640px){
 
-}
-
-@for $i from 1 to $columns {
-
-  .w-#{$i} {
-
-    @extend %full-width;
-
-  }
-
-}
-
-@media screen and (min-width: 640px) {
-  
-    @for $i from 1 through $columns {
-
-        .w-#{$i} {
-
-            width: column($i);
-            margin-right: percentage($gutter-width, $grid-width);
-
-        }
+        padding: 5rem 0;
+        text-align: left;
 
     }
-  
-  
-   @for $i from 1 through $columns {
 
-     .p-#{$i} {
+    @include break-at(1200px){
 
-         margin-left: column($i) + percentage($gutter-width, $grid-width);
+        padding: 5rem 0 9rem 0;
 
-     }
+    }
 
-   }
-   
 }
+    .container {
 
+        max-width: $grid-width;
+        margin: 0 auto;
+        padding: 0 1em;
+
+    }
+
+    .row {
+
+        @include clearfix();
+
+    }
+
+
+
+    .col {
+        margin-bottom: 1em;
+        float: left;
+    }
+    .col:last-child {
+        margin-right: 0;
+    }
+
+    %full-width {
+
+        width: 100%;
+
+    }
+
+
+    @for $i from 1 to $columns {
+
+      .w-#{$i} {
+
+        @extend %full-width;
+
+      }
+
+    }
+
+
+
+    @media screen and (min-width: 640px) {
+      
+        @for $i from 1 through $columns {
+
+            .w-#{$i} {
+
+                width: column($i);
+                margin-right: percentage($gutter-width, $grid-width);
+
+            }
+
+        }
+      
+      
+       @for $i from 1 through $columns {
+
+         .p-#{$i} {
+
+             margin-left: column($i) + percentage($gutter-width, $grid-width);
+
+         }
+
+       }
+       
+    }
+
+}
