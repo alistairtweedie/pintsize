@@ -1,5 +1,5 @@
 # Pintsize
-Sass front end boilerplate
+Sass front end template
 
 
 ##Get started
