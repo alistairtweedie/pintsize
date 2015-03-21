@@ -7,35 +7,22 @@
 
 h1 {
 
-    font-size: 33px;
-    font-size: 3.3rem;
+    font-size: 70px;
+    font-size: 7rem;
     line-height: 1.273;
-    margin-top: 42px;
-    margin-top: 4.2rem;
-    margin-bottom: 21px;
-    margin-bottom: 2.1rem;
+    margin: 0;
 
     @include break-at(640px) {
 
-        font-size: 54px;
-        font-size: 5.4rem;
-        line-height: 1.333;
-        margin-top: 48px;
-        margin-top: 4.8rem;
-        margin-bottom: 24px;
-        margin-bottom: 2.4rem;
+        font-size: 100px;
+        font-size: 10rem;
 
     }
 
-    @include break-at(1200px){
+    @include break-at(1200px) {
 
-        font-size: 64px;
-        font-size: 6.4rem;
-        line-height: 1.406; 
-        margin-top: 60px;
-        margin-top: 6rem;
-        margin-bottom: 30px;
-        margin-bottom: 3rem;
+        font-size: 140px;
+        font-size: 14rem;
 
     }
 
@@ -51,7 +38,7 @@ h2 {
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
 
-    @include break-at(640px){
+    @include break-at(640px) {
 
         font-size: 36px;
         font-size: 3.6rem;
@@ -63,7 +50,7 @@ h2 {
 
     }
 
-    @include break-at(1200px){
+    @include break-at(1200px) {
 
         font-size: 43px;
         font-size: 4.3rem;
@@ -87,7 +74,7 @@ h3 {
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
 
-    @include break-at(640px){
+    @include break-at(640px) {
 
         font-size: 24px;
         font-size: 2.4rem;
@@ -99,7 +86,7 @@ h3 {
 
     }
 
-    @include break-at(1200px){
+    @include break-at(1200px) {
 
         font-size: 29px;
         font-size: 2.9rem;
@@ -122,7 +109,7 @@ h4 {
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
 
-    @include break-at(640px){
+    @include break-at(640px) {
 
         font-size: 19px;
         font-size: 1.9rem;
@@ -134,7 +121,7 @@ h4 {
 
     }
 
-    @include break-at(1200px){
+    @include break-at(1200px) {
 
         font-size: 24px;
         font-size: 2.4rem;
@@ -159,7 +146,7 @@ h5 {
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
 
-    @include break-at(640px){
+    @include break-at(640px) {
 
         font-size: 19px;
         font-size: 1.9rem;
@@ -171,7 +158,7 @@ h5 {
 
     }
 
-    @include break-at(1200px){
+    @include break-at(1200px) {
 
         font-size: 24px;
         font-size: 2.4rem;
@@ -196,7 +183,7 @@ h6 {
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
 
-    @include break-at(640px){
+    @include break-at(640px) {
 
         font-size: 19px;
         font-size: 1.9rem;
@@ -208,7 +195,7 @@ h6 {
 
     }
 
-    @include break-at(1200px){
+    @include break-at(1200px) {
 
         font-size: 24px;
         font-size: 2.4rem;
@@ -229,7 +216,7 @@ p, ul, ol, pre, table, blockquote {
     margin-bottom: 21px;
     margin-bottom: 2.1rem;
 
-    @include break-at(640px){
+    @include break-at(640px) {
 
         margin-top: 24px;
         margin-top: 2.4rem;
@@ -238,7 +225,7 @@ p, ul, ol, pre, table, blockquote {
 
     }
 
-    @include break-at(1000px){
+    @include break-at(1000px) {
 
         margin-top: 30px;
         margin-top: 3rem;
