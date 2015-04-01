@@ -8,9 +8,9 @@ It's easy to get started. Just follow the steps below.
 
 ###1.Download
 
-Download Pintsize or clone the repo
+Download Pintsize or install with bower
 
-	$ git clone https://github.com/alistairtweedie/pintsize.git
+	$ bower install pintsize
 
 
 ###2. Install
