@@ -2,12 +2,14 @@
   "name": "Pintsize",
   "version": "0.0.1",
   "authors": [
-    "Alistair Tweedie <info@alistarttweedie.com>"
+    "Alistair Tweedie <info@alistairtweedie.com>"
   ],
-  "description": "Sass front end boilerplate",
+  "description": "Sass front end template",
   "main": "gulpfile.js",
   "keywords": [
-    "boilerplate"
+    "sass",
+    "css",
+    "frontend"
   ],
   "license": "MIT",
   "homepage": "https://github.com/alistairtweedie/pintsize",
