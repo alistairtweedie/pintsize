@@ -7,22 +7,35 @@
 
 h1 {
 
-    font-size: 70px;
-    font-size: 7rem;
+    font-size: 33px;
+    font-size: 3.3rem;
     line-height: 1.273;
-    margin: 0;
+    margin-top: 42px;
+    margin-top: 4.2rem;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
 
     @include break-at(640px) {
 
-        font-size: 100px;
-        font-size: 10rem;
+        font-size: 54px;
+        font-size: 5.4rem;
+        line-height: 1.333;
+        margin-top: 48px;
+        margin-top: 4.8rem;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
 
     }
 
-    @include break-at(1200px) {
+    @include break-at(1200px){
 
-        font-size: 140px;
-        font-size: 14rem;
+        font-size: 64px;
+        font-size: 6.4rem;
+        line-height: 1.406; 
+        margin-top: 60px;
+        margin-top: 6rem;
+        margin-bottom: 30px;
+        margin-bottom: 3rem;
 
     }
 
