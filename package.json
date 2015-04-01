@@ -1,7 +1,7 @@
 {
   "name": "Pintsize",
   "version": "0.0.1",
-  "description": "Sass front end boilerplate",
+  "description": "A Sass front end template",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
@@ -10,9 +10,10 @@
   "keywords": [
     "css",
     "sass",
-    "boilerplate"
+    "frontend",
+    "template"
   ],
-  "author": "author",
+  "author": "alistairtweedie",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alistairtweedie/pintsize/issues"
