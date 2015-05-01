@@ -25,7 +25,7 @@ A bleeding edge CSS setup.
 - [x] PostCSS integration
 - [x] CSSNext integration
 - [x] ES6 transpiler
-- [ ] CI tests
+- [x] CI tests
 - [ ] Starter template
 - [ ] Update favicon
 - [ ] HTML templating or Jekyll integration
