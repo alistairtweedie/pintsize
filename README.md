@@ -1,6 +1,5 @@
 # Frequent
-A bleeding edge CSS setup to build websites using tomorrow's technologies.
-Inspired by [Pintsize](https://github.com/alistairtweedie/pintsize) (SCSS).
+A bleeding edge CSS setup.
 
 ### Features
 
