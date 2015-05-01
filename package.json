@@ -1,11 +1,11 @@
 {
-  "name": "Pintsize",
+  "name": "Frequent",
   "version": "0.0.1",
-  "description": "A Sass front end template",
+  "description": "A CSS framework built upon Pintsize using CSSNext and PostCSS",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alistairtweedie/pintsize.git"
+    "url": "https://github.com/FalkoJoseph/frequent"
   },
   "keywords": [
     "css",
@@ -13,10 +13,10 @@
     "frontend",
     "template"
   ],
-  "author": "alistairtweedie",
+  "author": "Falko Joseph",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alistairtweedie/pintsize/issues"
+    "url": "https://github.com/FalkoJoseph/frequent/issues"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",
