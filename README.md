@@ -28,7 +28,7 @@ A bleeding edge CSS setup.
 - [ ] CI tests
 - [ ] Starter template
 - [ ] Update favicon
-- [ ] HTML templating
+- [ ] HTML templating or Jekyll integration
 
 ###1.Download
 
