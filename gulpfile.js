@@ -40,11 +40,11 @@ var processors = [
 
 // Pre process
 gulp.task('pre-process', function(){
-  var input = fs.readFileSync('./next/base.css', 'utf8');
+  var input = fs.readFileSync('./css/base.css', 'utf8');
 
-  gulp.src('./next/**/*.css')
+  gulp.src('./css/**/*.css')
       .pipe(watch(function(files) {
-        gulp.src('./next/base.css')
+        gulp.src('./css/base.css')
           .pipe(postcss(processors))
           .pipe(cssnext(input))
           .pipe(gulp.dest('./dist/css/'))
@@ -81,7 +81,7 @@ gulp.task('bs-reload', function () {
 
 gulp.task('default', ['pre-process', 'es6', 'bs-reload', 'browser-sync'], function(){
   gulp.start('pre-process');
-  gulp.watch('next/**/*.css', ['pre-process']);
+  gulp.watch('css/**/*.css', ['pre-process']);
   gulp.watch('es6/**/*.es6', ['es6']);
   gulp.watch('dist/css/base.css', ['bs-reload']);
   gulp.watch(['*.html'], ['bs-reload']);
