@@ -1,4 +1,4 @@
-# Frequent
+# Frequent [![Build Status](https://travis-ci.org/FalkoJoseph/frequent.svg)](https://travis-ci.org/FalkoJoseph/frequent)
 A bleeding edge CSS setup.
 
 ### Features
