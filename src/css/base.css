@@ -11,3 +11,7 @@
 @import 'modules/buttons';
 @import 'modules/forms';
 @import 'modules/tables';
+
+body {
+  background: red;
+}
