@@ -1,5 +1,5 @@
 # Frequent [![Build Status](https://travis-ci.org/FalkoJoseph/frequent.svg)](https://travis-ci.org/FalkoJoseph/frequent)
-A bleeding edge CSS setup.
+A bleeding edge CSS setup using PostCSS, CSSNext, router.js and Handlebars.
 
 ### Features
 
@@ -25,10 +25,10 @@ A bleeding edge CSS setup.
 - [x] PostCSS integration
 - [x] CSSNext integration
 - [x] ES6 transpiler
-- [x] CI tests
+- [x] Travis integration
+- [ ] Javascript templating using Mustache and router.js
 - [ ] Starter template
 - [ ] Update favicon
-- [ ] HTML templating or Jekyll integration
 
 ###1.Download
 
