@@ -1,18 +1,19 @@
 {
-  "name": "Pintsize",
+  "name": "Frequent",
   "version": "0.0.1",
   "authors": [
-    "Alistair Tweedie <info@alistairtweedie.com>"
+    "Falko Joseph <falkojoseph@gmail.com>"
   ],
-  "description": "Sass front end template",
+  "description": "A CSS framework built upon Pintsize using CSSNext and PostCSS",
   "main": "gulpfile.js",
   "keywords": [
-    "sass",
+    "postcss",
+    "cssnext,"
     "css",
     "frontend"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/alistairtweedie/pintsize",
+  "homepage": "https://github.com/FalkoJoseph/frequent",
   "ignore": [
     "**/.*",
     "node_modules",

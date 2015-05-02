@@ -1,11 +1,11 @@
 {
-  "name": "Pintsize",
+  "name": "Frequent",
   "version": "0.0.1",
-  "description": "A Sass front end template",
+  "description": "A CSS framework built upon Pintsize using CSSNext and PostCSS",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alistairtweedie/pintsize.git"
+    "url": "https://github.com/FalkoJoseph/frequent"
   },
   "keywords": [
     "css",
@@ -13,28 +13,55 @@
     "frontend",
     "template"
   ],
-  "author": "alistairtweedie",
+  "author": "Falko Joseph",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alistairtweedie/pintsize/issues"
+    "url": "https://github.com/FalkoJoseph/frequent/issues"
   },
   "devDependencies": {
+    "autoprefixer-core": "^5.1.11",
+    "babel-core": "5.2.2",
     "browser-sync": "^1.1.1",
     "css": "^2.1.0",
+    "css-mqpacker": "^3.1.0",
     "css-parse": "^2.0.0",
-    "gulp": "^3.8.2",
+    "cssgrace": "^2.0.2",
+    "cssnext": "^1.4.0",
+    "csswring": "^3.0.4",
+    "del": "^1.1.1",
+    "es6-promise": "~2.1.1",
+    "gulp": "^3.8.11",
     "gulp-autoprefixer": "0.0.7",
-    "gulp-concat": "^2.4.3",
+    "gulp-changed": "^1.2.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.5.2",
     "gulp-csslint": "^0.1.4",
-    "gulp-minify-css": "^0.3.5",
+    "gulp-cssnext": "^1.0.0",
+    "gulp-es6-transpiler": "^1.0.1",
+    "gulp-ext-replace": "^0.2.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-postcss": "^5.1.4",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^0.7.2",
-    "gulp-shell": "^0.2.8",
-    "gulp-size": "^0.4.0",
+    "gulp-rm": "^1.0.0",
+    "gulp-shell": "^0.4.1",
     "gulp-stylestats": "^0.2.8",
+    "gulp-swig": "^0.7.4",
     "gulp-util": "^2.2.18",
-    "gulp-watch": "^0.6.8",
+    "gulp-watch": "^4.2.4",
+    "js-base64": "~2.1.8",
     "lodash": "^2.4.1",
-    "node-sass": "^0.9"
+    "lost": "^6.1.1",
+    "postcss": "^4.1.8",
+    "postcss-for": "^0.2.0",
+    "postcss-import": "^5.2.2",
+    "postcss-mixins": "^0.1.1",
+    "postcss-nested": "^0.2.2",
+    "postcss-simple-extend": "^0.3.1",
+    "postcss-zindex": "^1.1.1",
+    "source-map": "~0.4.2",
+    "swig": "^1.4.2"
+  },
+  "dependencies": {
+    "postcss-zindex": "^1.1.1"
   }
 }
