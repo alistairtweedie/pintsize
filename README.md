@@ -6,6 +6,7 @@ An experimental bleeding edge CSS setup using PostCSS, CSSNext and Swig
 - ECMAScript 6 transpiler
 - PostCSS processor including it's additional syntax extensions
 - CSSNext
+- Swig templating
 - Autoprefixer
 - BrowserSync
 - CSSWring
