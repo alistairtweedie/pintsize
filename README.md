@@ -1,5 +1,5 @@
 # Frequent [![Build Status](https://travis-ci.org/FalkoJoseph/frequent.svg)](https://travis-ci.org/FalkoJoseph/frequent)
-An experimental bleeding edge CSS setup using PostCSS, CSSNext, router.js and Handlebars.
+An experimental bleeding edge CSS setup using PostCSS, CSSNext and Swig
 
 ### Features
 
