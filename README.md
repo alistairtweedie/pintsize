@@ -26,7 +26,10 @@ An experimental bleeding edge CSS setup using PostCSS, CSSNext, router.js and Ha
 - [x] CSSNext integration
 - [x] ES6 transpiler
 - [x] Travis integration
-- [ ] Javascript templating using Mustache and router.js
+- [x] Swig
+- [ ] Clear /dist before building
+- [ ] Watch for file changes (removal or renaming)
+- [ ] gh-pages
 - [ ] Starter template
 - [ ] Update favicon
 

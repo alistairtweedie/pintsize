@@ -31,14 +31,17 @@
     "es6-promise": "~2.1.1",
     "gulp": "^3.8.2",
     "gulp-autoprefixer": "0.0.7",
+    "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.5.2",
     "gulp-csslint": "^0.1.4",
     "gulp-cssnext": "^1.0.0",
     "gulp-es6-transpiler": "^1.0.1",
+    "gulp-ext-replace": "^0.2.0",
     "gulp-postcss": "^5.1.4",
     "gulp-rename": "^1.2.0",
-    "gulp-shell": "^0.2.8",
+    "gulp-shell": "^0.4.1",
     "gulp-stylestats": "^0.2.8",
+    "gulp-swig": "^0.7.4",
     "gulp-util": "^2.2.18",
     "gulp-watch": "^0.6.8",
     "js-base64": "~2.1.8",
@@ -51,7 +54,8 @@
     "postcss-nested": "^0.2.2",
     "postcss-simple-extend": "^0.3.1",
     "postcss-zindex": "^1.1.1",
-    "source-map": "~0.4.2"
+    "source-map": "~0.4.2",
+    "swig": "^1.4.2"
   },
   "dependencies": {
     "postcss-zindex": "^1.1.1"
