@@ -1,6 +1,6 @@
 {
   "name": "Pintsize",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Sass front end template",
   "main": "gulpfile.js",
   "repository": {
