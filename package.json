@@ -33,8 +33,6 @@
     "gulp-size": "^0.4.0",
     "gulp-stylestats": "^0.2.8",
     "gulp-util": "^2.2.18",
-    "gulp-watch": "^0.6.8",
-    "lodash": "^2.4.1",
-    "node-sass": "^0.9"
+    "gulp-watch": "^0.6.8"
   }
 }
