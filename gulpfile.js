@@ -16,21 +16,19 @@ var gulp = require('gulp'),
 // Task that compiles scss files down to css
 gulp.task('pre-process', function(){
   gulp.src('./scss/site.scss')
-      .pipe(watch(function(files) {
-        return files.pipe(sass())
-          .pipe(size({gzip: false, showFiles: true, title:'un-prefixed css'}))
-          .pipe(size({gzip: true, showFiles: true, title:'un-prefixed gzipped css'}))
-          .pipe(prefix())
-          .pipe(size({gzip: false, showFiles: true, title:'prefixed css'}))
-          .pipe(size({gzip: true, showFiles: true, title:'prefixed css'}))
-          .pipe(gulp.dest('css'))
-          .pipe(minifyCSS())
-          .pipe(rename('site.min.css'))
-          .pipe(gulp.dest('./css/'))
-          .pipe(size({gzip: false, showFiles: true, title:'minified css'}))
-          .pipe(size({gzip: true, showFiles: true, title:'minified css'}))
-          .pipe(browserSync.reload({stream:true}));
-      }));
+      .pipe(sass())
+      .pipe(size({gzip: false, showFiles: true, title:'un-prefixed css'}))
+      .pipe(size({gzip: true, showFiles: true, title:'un-prefixed gzipped css'}))
+      .pipe(prefix())
+      .pipe(size({gzip: false, showFiles: true, title:'prefixed css'}))
+      .pipe(size({gzip: true, showFiles: true, title:'prefixed css'}))
+      .pipe(gulp.dest('css'))
+      .pipe(minifyCSS())
+      .pipe(rename('site.min.css'))
+      .pipe(gulp.dest('./css/'))
+      .pipe(size({gzip: false, showFiles: true, title:'minified css'}))
+      .pipe(size({gzip: true, showFiles: true, title:'minified css'}))
+      .pipe(browserSync.reload({stream:true}));
 });
 
 
