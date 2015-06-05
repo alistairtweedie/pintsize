@@ -1,4 +1,4 @@
-# Pintsize
+# Pintsize [![Build Status](https://travis-ci.org/alistairtweedie/pintsize.svg?branch=master)](https://travis-ci.org/alistairtweedie/pintsize)
 Sass front end template
 
 
