@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 
 // Task that compiles scss files down to css
 gulp.task('pre-process', function(){
-  gulp.src('./scss/site.scss')
+  return gulp.src('./scss/site.scss')
       .pipe(sass())
       .pipe(size({gzip: false, showFiles: true, title:'un-prefixed css'}))
       .pipe(size({gzip: true, showFiles: true, title:'un-prefixed gzipped css'}))
