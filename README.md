@@ -79,7 +79,7 @@ By setting the $advanced-usage variable in _variables.scss to 'true' you can wor
  
 	.main-page-content {
 	    
-	    max-width: $grid-width; // calulated from your grid variables
+	    max-width: $grid-width; // calculated from your grid variables
 	    margin: 0 auto;
 	    padding: 0 1em;
 	    @include clearfix;
