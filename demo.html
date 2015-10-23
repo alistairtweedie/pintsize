@@ -30,59 +30,59 @@
 
     <div class="flex">
         <div class="col">
-            <h1>Basic Auto flex</h1>
-            <p>Layout is dictated by content and will auto flex on viewport resize.</p>
+            <h2>Basic strict grid</h2>
+            <p>Column size is dictated by <code>.col__*viewport*--*number*</code>. Use this if you'd like complete control.</p>
         </div>
     </div>
 
     <div class="flex">
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
-        <div class="col col__md--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
+        <div class="col col__sm--1"><div class="block">1</div></div>
 
     </div>
 
     <div class="flex">
 
-        <div class="col col__md--2"><div class="block">2</div></div>
-        <div class="col col__md--2"><div class="block">2</div></div>
-        <div class="col col__md--2"><div class="block">2</div></div>
-        <div class="col col__md--2"><div class="block">2</div></div>
-        <div class="col col__md--2"><div class="block">2</div></div>
-        <div class="col col__md--2"><div class="block">2</div></div>
+        <div class="col col__sm--2"><div class="block">2</div></div>
+        <div class="col col__sm--2"><div class="block">2</div></div>
+        <div class="col col__sm--2"><div class="block">2</div></div>
+        <div class="col col__sm--2"><div class="block">2</div></div>
+        <div class="col col__sm--2"><div class="block">2</div></div>
+        <div class="col col__sm--2"><div class="block">2</div></div>
 
     </div>
 
     <div class="flex">
 
-        <div class="col col__md--3"><div class="block">3</div></div>
-        <div class="col col__md--3"><div class="block">3</div></div>
-        <div class="col col__md--3"><div class="block">3</div></div>
-        <div class="col col__md--3"><div class="block">3</div></div>
+        <div class="col col__sm--3"><div class="block">3</div></div>
+        <div class="col col__sm--3"><div class="block">3</div></div>
+        <div class="col col__sm--3"><div class="block">3</div></div>
+        <div class="col col__sm--3"><div class="block">3</div></div>
       
     </div>
 
     <div class="flex">
 
-        <div class="col col__md--4"><div class="block">4</div></div>
-        <div class="col col__md--4"><div class="block">4</div></div>
-        <div class="col col__md--4"><div class="block">4</div></div>
+        <div class="col col__sm--4"><div class="block">4</div></div>
+        <div class="col col__sm--4"><div class="block">4</div></div>
+        <div class="col col__sm--4"><div class="block">4</div></div>
       
     </div>
 
 
     <div class="flex">
 
-        <div class="col col__md--12"><div class="block">12</div></div>
+        <div class="col col__sm--12"><div class="block">12</div></div>
       
     </div>
 
@@ -91,29 +91,92 @@
     <div class="flex">
         <div class="col col__md--12">
             <h2>Using media queries</h2>
-            <p>An exmaple of using pre set breakpoints in the grid config section</p>
+            <p>An example of using pre set breakpoints in the grid config section.</p>
         </div>
     </div>
 
     <div class="flex">
 
-        <div class="col col__md--6 col__lg--3"><div class="block">6</div></div>
-        <div class="col col__md--6 col__lg--3"><div class="block">6</div></div>
-        <div class="col col__md--6 col__lg--3"><div class="block">6</div></div>
-        <div class="col col__md--6 col__lg--3"><div class="block">6</div></div>
+        <div class="col col__sm--12 col__md--6 col__lg--3"><div class="block">6</div></div>
+        <div class="col col__sm--12 col__md--6 col__lg--3"><div class="block">6</div></div>
+        <div class="col col__sm--12 col__md--6 col__lg--3"><div class="block">6</div></div>
+        <div class="col col__sm--12 col__md--6 col__lg--3"><div class="block">6</div></div>
       
     </div>
+
+
+    <div class="flex">
+        <div class="col">
+            <h2>Basic auto flex</h2>
+            <p>Adding <code>.flex--auto</code> to the parent <code>.flex</code> element will dictate that the layout is depended on content.</p>
+        </div>
+    </div>
+
+
+    <div class="flex flex--auto">
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+        <div class="col"><div class="block">1</div></div>
+
+    </div>
+
+    <div class="flex flex--auto">
+
+        <div class="col"><div class="block">2</div></div>
+        <div class="col"><div class="block">2</div></div>
+        <div class="col"><div class="block">2</div></div>
+        <div class="col"><div class="block">2</div></div>
+        <div class="col"><div class="block">2</div></div>
+        <div class="col"><div class="block">2</div></div>
+
+    </div>
+
+    <div class="flex flex--auto">
+
+        <div class="col"><div class="block">3</div></div>
+        <div class="col"><div class="block">3</div></div>
+        <div class="col"><div class="block">3</div></div>
+        <div class="col"><div class="block">3</div></div>
+      
+    </div>
+
+    <div class="flex flex--auto">
+
+        <div class="col"><div class="block">4</div></div>
+        <div class="col"><div class="block">4</div></div>
+        <div class="col"><div class="block">4</div></div>
+      
+    </div>
+
+
+    <div class="flex flex--auto">
+
+        <div class="col"><div class="block">12</div></div>
+      
+    </div>
+
+
+
 
     <div class="flex">
         <div class="col col__md--12">
             <h2>Nesting</h2>
-            <p>Columns can be nested as long as the markup is as below</p>
+            <p>Columns can be nested with using strict classes and flex auto as long as the markup is as below.</p>
         </div>
     </div>
 
-    <div class="flex">
+    <div class="flex flex--auto">
 
-        <div class="col col__md--6 col__lg--3">
+        <div class="col">
 
             <div class="flex flex--example">
             
@@ -126,7 +189,7 @@
             
 
         </div>
-        <div class="col col__md--6 col__lg--3">
+        <div class="col">
 
             <div class="flex flex--example">
             
@@ -139,7 +202,7 @@
             
 
         </div>
-        <div class="col col__md--6 col__lg--3">
+        <div class="col">
 
             <div class="flex flex--example">
             
@@ -152,7 +215,7 @@
             
 
         </div>
-        <div class="col col__md--6 col__lg--3">
+        <div class="col">
             
             <div class="flex flex--example">
 
@@ -172,13 +235,13 @@
         
         <div class="col col__md--12">
             <h2>Flex first</h2>
-            <p>Adding <code>col--first</code> will dictate that column to be first child of the parent element</p>
+            <p>Adding <code>.col--first</code> will dictate that column to be first child of the parent element.</p>
         </div>
 
     </div>
 
 
-    <div class="flex">
+    <div class="flex flex--auto">
 
         <div class="col col__md--2"><div class="block">1</div></div>
         <div class="col col__md--2"><div class="block">2</div></div>
@@ -192,11 +255,11 @@
     <div class="flex">
     <div class="col col__md--12">
             <h2>Flex last</h2>
-            <p>Adding <code>col--last</code> will dictate that column to be last child of the parent <code>flex</code> element</p>
+            <p>Adding <code>.col--last</code> will dictate that column to be last child of the parent <code>.flex</code> element.</p>
         </div>
     </div>
 
-    <div class="flex">
+    <div class="flex flex--auto">
 
         <div class="col col__md--2"><div class="block">1</div></div>
         <div class="col col__md--2"><div class="block">2</div></div>
@@ -210,11 +273,11 @@
     <div class="flex">
         <div class="col col__md--12">
             <h2>Flex reverse</h2>
-            <p>Adding <code>flex--reverse</code> to the parent <code>flex</code> element will dictate that the column order in the DOM be reversed</p>
+            <p>Adding <code>.flex--reverse</code> to the parent <code>.flex</code> element will dictate that the column order in the DOM be reversed.</p>
         </div>
     </div>
 
-    <div class="flex flex--reverse">
+    <div class="flex flex--auto flex--reverse">
 
         <div class="col col__md--2"><div class="block">1</div></div>
         <div class="col col__md--2"><div class="block">2</div></div>
@@ -225,10 +288,10 @@
 
     </div>
 
-    <div class="flex flex--none">
+    <div class="flex">
     <div class="col col__md--12">
             <h2>Flex between</h2>
-            <p>Adding <code>flex--between</code> to the parent <code>flex</code> element will dictate that the columns are evenly distributed inside the parent <code>flex</code> element; first item is on the start line, last item on the end line</p>
+            <p>Adding <code>.flex--between</code> to the parent <code>.flex</code> element will dictate that the columns are evenly distributed inside the parent <code>.flex</code> element; first item is on the start line, last item on the end line.</p>
         </div>
     </div>
 
@@ -243,7 +306,7 @@
     <div class="flex">
     <div class="col col__md--12">
             <h2>Flex around</h2>
-            <p>Adding <code>flex--around</code> to the parent <code>flex</code> element will dictate that the columns are evenly distributed inside the parent <code>flex</code> element with equal space around them.</p>
+            <p>Adding <code>.flex--around</code> to the parent <code>.flex</code> element will dictate that the columns are evenly distributed inside the parent <code>.flex</code> element with equal space around them.</p>
         </div>
     </div>
 
@@ -258,7 +321,7 @@
     <div class="flex">
     <div class="col col__md--12">
             <h2>Flex start</h2>
-            <p>Adding <code>flex--start</code> to the parent <code>flex</code> element will dictate that the columns are packed towards the start of the parent <code>flex</code> element</p>
+            <p>Adding <code>.flex--start</code> to the parent <code>.flex</code> element will dictate that the columns are packed towards the start of the parent <code>.flex</code> element.</p>
         </div>
     </div>
 
@@ -272,7 +335,7 @@
     <div class="flex">
     <div class="col col__md--12">
             <h2>Flex center</h2>
-            <p>Adding <code>flex--center</code> to the parent <code>flex</code> element will dictate that the columns are packed towards the center of the parent <code>flex</code> element</p>
+            <p>Adding <code>.flex--center</code> to the parent <code>.flex</code> element will dictate that the columns are packed towards the center of the parent <code>.flex</code> element.</p>
         </div>
     </div>
 
@@ -286,7 +349,7 @@
     <div class="flex">
     <div class="col col__md--12">
             <h2>Flex end</h2>
-            <p>Adding <code>flex--end</code> to the parent <code>flex</code> element will dictate that the columns are packed towards the end of the parent <code>flex</code> element</p>
+            <p>Adding <code>.flex--end</code> to the parent <code>.flex</code> element will dictate that the columns are packed towards the end of the parent <code>.flex</code> element.</p>
         </div>
     </div>
 
@@ -300,11 +363,11 @@
     <div class="flex">
     <div class="col col__md--12">
             <h2>Justfy top</h2>
-            <p>Adding <code>flex--top</code> to the parent <code>flex</code> element will dictate that the columns are vertically aligned to the top of the parent <code>flex</code> element</p>
+            <p>Adding <code>.flex--top</code> to the parent <code>.flex</code> element will dictate that the columns are vertically aligned to the top of the parent <code>.flex</code> element.</p>
         </div>
     </div>
 
-    <div class="flex flex--top">
+    <div class="flex flex--auto flex--top">
         
         <div class="col col__md--6">
             <div class="block u-text-left">
@@ -322,11 +385,11 @@
     <div class="flex">
     <div class="col col__md--12">
             <h2>Justify middle</h2>
-            <p>Adding <code>flex--middle</code> to the parent <code>flex</code> element will dictate that the columns are vertically aligned to the middle of the parent <code>flex</code> element</p>
+            <p>Adding <code>.flex--middle</code> to the parent <code>.flex</code> element will dictate that the columns are vertically aligned to the middle of the parent <code>.flex</code> element.</p>
         </div>
     </div>
 
-    <div class="flex flex--middle">
+    <div class="flex flex--auto flex--middle">
         
         <div class="col col__md--6">
             <div class="block u-text-left">
@@ -344,11 +407,11 @@
     <div class="flex">
     <div class="col col__md--12">
             <h2>Justify bottom</h2>
-            <p>Adding <code>flex--bottom</code> to the parent <code>flex</code> element will dictate that the columns are vertically aligned to the bottom of the parent <code>flex</code> element</p>
+            <p>Adding <code>.flex--bottom</code> to the parent <code>.flex</code> element will dictate that the columns are vertically aligned to the bottom of the parent <code>.flex</code> element.</p>
         </div>
     </div>
 
-    <div class="flex flex--bottom">
+    <div class="flex flex--auto flex--bottom">
         
         <div class="col col__md--6">
             <div class="block u-text-left">
