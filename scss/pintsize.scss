@@ -1,0 +1,486 @@
+/*-------------------------------------------------------*\
+
+    Pintsize
+    Url: http://www.pintsize.io
+    Github: https://github.com/alistairtweedie/Pintsize/
+
+/*-------------------------------------------------------*/
+    
+
+
+/*-------------------------------------------------------*\
+    #Grid config
+\*-------------------------------------------------------*/
+
+// Number of columns
+$columns: 12 !default;
+
+//Width of a column in pixels
+$column-width: 65px !default;
+
+//Width of a gutter in pixels
+$gutter-width: 25px !default;
+
+//Fixed gutter width?
+//False will generate a flexible gutter width.
+$fixed-gutter-size: true !default;
+
+//Medium breakpoint to respond to
+$md: 40em;
+
+//Large breakpoint to respond to
+$lg: 64em;
+
+//Provide fallbacks for IE9 and IE8?
+//This generates a lot more css
+$old-ie: true !default;
+
+
+/*-------------------------------------------------------*\
+    #Grid calculations
+\*-------------------------------------------------------*/
+
+//percentage function
+@function percentage($size, $width) {
+
+    @return $size / $width * 100%;
+
+}
+
+$grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
+
+
+//calc column width
+@function column($value) {
+
+    $width: $value * $column-width + ($value ) * $gutter-width;
+    @return percentage($width, $grid-width);
+  
+}
+
+
+/*-------------------------------------------------------*\
+    #Clearfix mixin
+\*-------------------------------------------------------*/
+
+@mixin clearfix() {
+
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    & {
+        *zoom: 1;
+    }
+
+}
+
+/*-------------------------------------------------------*\
+    #Box sizing mixin
+\*-------------------------------------------------------*/
+
+@mixin box-sizing {
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+
+/*-------------------------------------------------------*\
+    #Media query mixin
+\*-------------------------------------------------------*/
+
+@mixin respond-to($point) {
+
+    @media (min-width: $point) {
+
+        @content;
+
+    }
+
+}
+
+/*-------------------------------------------------------*\
+    #Older IE mixin
+    - support for IE9 and IE8.
+    - $old-ie must be srt to true.
+\*-------------------------------------------------------*/
+
+@mixin old-ie {
+
+    @if $old-ie == true {
+
+        .old-ie & { 
+
+            @content
+
+        }
+
+    }
+
+}
+
+/*-------------------------------------------------------*\
+    #Gutter mixin
+    - If $fixed-gutter-size is set to true this will output
+    the $gutter-width as a fixed value and not percentage
+\*-------------------------------------------------------*/
+
+
+@mixin gutter-output {
+
+    @if $fixed-gutter-size == true {
+
+        padding-left: $gutter-width / 2;
+        padding-right: $gutter-width / 2;
+
+    }
+
+    @else {
+
+        padding-left: percentage($gutter-width, $grid-width) / 2;
+        padding-right: percentage($gutter-width, $grid-width) / 2;
+    }
+
+}
+
+
+/*-------------------------------------------------------*\
+    #The grid
+\*-------------------------------------------------------*/
+
+.container {
+    max-width: $grid-width; // Calculated from config
+    margin: 0 auto;
+    @include box-sizing;
+
+    @include old-ie {
+
+        @include clearfix;
+
+    }
+
+}
+
+// wrapper class for columns
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    @include old-ie {
+
+        @include clearfix;
+
+    }
+}
+
+// defualt columns class - auto flex
+.col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    @include box-sizing;
+    @include gutter-output;
+
+    @include old-ie {
+
+        float: left;
+        display: block;
+    
+    }
+}
+
+
+
+// cycles through $columns and calculates widths
+@for $i from 1 through $columns {
+
+    .col__sm--#{$i} {
+        width: column($i);
+
+        @include old-ie {
+
+            float: left;
+            display: block;
+
+        }
+
+    }
+
+}
+
+// cycles through $columns and calculates offsets
+@for $i from 1 through $columns {
+
+    .col__offset--#{$i} {
+        
+        margin-left: column($i);
+
+    }
+
+}
+  
+
+
+// cycles through $columns and
+// generates medium breakpoint column classes
+@include respond-to($md)  {
+
+    @for $i from 1 through $columns {
+
+        .col__md--#{$i} {
+            width: column($i);
+
+            @include old-ie {
+
+                float: left;
+                display: block;
+
+            }
+
+        }
+
+    }
+  
+}
+
+
+// cycles through $columns and
+// generates large breakpoint column classes
+@include respond-to($lg)  {
+
+
+    @for $i from 1 through $columns {
+
+        .col__lg--#{$i} {
+            width: column($i);
+
+            @include old-ie {
+
+                float: left;
+                display: block;
+
+            }
+
+        }
+
+    }
+
+}    
+
+
+/*-------------------------------------------------------*\
+    #Flexbox helper classes
+    - docs for browser support to be provided
+\*-------------------------------------------------------*/
+
+.flex--start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+
+    .col {
+        
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+
+    }
+}
+
+.flex--center {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    // defualt columns class required to be altered
+    .col {
+        
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+
+    }
+
+    // IE 8 and IE 9 fallback
+    @include old-ie {
+
+        .flex--center {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+    }
+
+}
+
+
+
+.flex--end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+
+    // defualt columns class required to be altered
+    .col {
+        
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+
+    }
+}
+
+.flex--top {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.flex--middle {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex--baseline {
+    -webkit-box-align: baseline;
+    -moz-box-align: baseline;
+    -ms-flex-align: baseline;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+}
+
+.flex--auto {
+    -webkit-box-flex: 1;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto
+}
+
+.flex--none {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.flex--wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+}
+
+.flex--row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex--row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex--bottom {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+
+.flex--around {
+    -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+
+    // defualt columns class required to be altered
+    .col {
+        
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+
+    }
+
+}
+
+.flex--between {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    // defualt columns class required to be altered
+    .col {
+        
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+
+    }
+}
+
+.flex--reverse {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+
+.col--first {
+    -webkit-box-ordinal-group: -1;
+    -moz-box-ordinal-group: -1;
+    -ms-flex-order: -1;
+    -webkit-order: -1;
+    order: -1;
+}
+
+.col--last {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+}
+
+
