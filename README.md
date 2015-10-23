@@ -13,7 +13,7 @@ It's easy to get started. Just follow the steps below.
 
 ###1.Download
 
-* [Download the rebuild release](#).
+* [Download the rebuild release](https://github.com/alistairtweedie/pintsize/archive/rebuild.zip).
 
 
 ###2. Install
