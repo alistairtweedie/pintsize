@@ -1,15 +1,16 @@
 {
   "name": "Pintsize",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "authors": [
     "Alistair Tweedie <info@alistairtweedie.com>"
   ],
-  "description": "Sass front end template",
+  "description": "A simple and modern flexible grid system",
   "main": "gulpfile.js",
   "keywords": [
-    "sass",
-    "css",
-    "frontend"
+    "gulp",
+    "grid",
+    "system",
+    "flexbox"
   ],
   "license": "MIT",
   "homepage": "https://github.com/alistairtweedie/pintsize",
