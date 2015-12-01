@@ -9,18 +9,18 @@ var gulp = require('gulp'),
 
 
 // Build Pintsize scss into css
-gulp.task('pintsize', function(){
-  gulp.src('./scss/pintsize.scss')
+gulp.task('default', function(){
+  gulp.src('./src/pintsize.scss')
       .pipe(sass())
       .pipe(size({gzip: false, showFiles: true, title:'un-prefixed css'}))
       .pipe(size({gzip: true, showFiles: true, title:'un-prefixed gzipped css'}))
       .pipe(prefix())
       .pipe(size({gzip: false, showFiles: true, title:'prefixed css'}))
       .pipe(size({gzip: true, showFiles: true, title:'prefixed css'}))
-      .pipe(gulp.dest('css'))
+      .pipe(gulp.dest('./dist'))
       .pipe(minifyCSS())
       .pipe(rename('pintsize.min.css'))
-      .pipe(gulp.dest('./css/'))
+      .pipe(gulp.dest('./dist'))
       .pipe(size({gzip: false, showFiles: true, title:'minified css'}))
       .pipe(size({gzip: true, showFiles: true, title:'minified css'}))
 });
