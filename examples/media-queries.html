@@ -11,7 +11,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="../dist/pintsize.css"/>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <style>
+    /*-------------------------------------------------------*\
+        #example styles
+    \*-------------------------------------------------------*/
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+    body {
+        font-size: 1em;
+        line-height: 1.5;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .demo--content-block {
+        background-color: #ddd;
+        text-align: center;
+        padding: 1.5em 0.5em;
+        margin: .5em 0;
+    }
+
+    .demo--class-display:before {
+
+        content: '.col--12';
+
+    }
+    
+    @media (min-width: 40em) {
+
+        .demo--class-display:before {
+
+            content: '.col--6';
+
+        }
+
+    }
+
+    @media (min-width: 64em) {
+
+        .demo--class-display:before {
+
+            content: '.col--3';
+
+        }
+
+    }
+    </style>
     
 </head>
 
@@ -27,10 +71,18 @@
 
     <div class="flex">
 
-        <div class="col col--12 col__md--6 col__lg--3"><div class="demo--content-block"></div></div>
-        <div class="col col--12 col__md--6 col__lg--3"><div class="demo--content-block"></div></div>
-        <div class="col col--12 col__md--6 col__lg--3"><div class="demo--content-block"></div></div>
-        <div class="col col--12 col__md--6 col__lg--3"><div class="demo--content-block"></div></div>
+        <div class="col col--12 col__md--6 col__lg--3">
+            <div class="demo--content-block demo--class-display"></div>
+        </div>
+        <div class="col col--12 col__md--6 col__lg--3">
+            <div class="demo--content-block demo--class-display"></div>
+        </div>
+        <div class="col col--12 col__md--6 col__lg--3">
+            <div class="demo--content-block demo--class-display"></div>
+        </div>
+        <div class="col col--12 col__md--6 col__lg--3">
+            <div class="demo--content-block demo--class-display"></div>
+        </div>
       
     </div>
 
