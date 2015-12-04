@@ -7,9 +7,10 @@
   "description": "A simple and modern flexible grid system",
   "main": "dist/pintsize.css",
   "keywords": [
-    "flexbox",
+    "gulp",
     "grid",
-    "css"
+    "system",
+    "flexbox"
   ],
   "license": "MIT",
   "homepage": "https://github.com/alistairtweedie/pintsize",
