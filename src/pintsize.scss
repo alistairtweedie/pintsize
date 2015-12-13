@@ -376,6 +376,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
     .col--#{$i} {
 
         flex-basis: column($i);
+        max-width: column($i);
 
         @include old-ie {
 
@@ -409,6 +410,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
         .col__md--#{$i} {
 
             flex-basis: column($i);
+            max-width: column($i);
 
             @include old-ie {
                 
@@ -433,6 +435,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
         .col__lg--#{$i} {
 
             flex-basis: column($i);
+            max-width: column($i);
 
             @include old-ie {
 
