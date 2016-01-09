@@ -5,7 +5,7 @@
     Github: https://github.com/alistairtweedie/Pintsize/
 
 /*-------------------------------------------------------*/
-    
+
 
 
 /*-------------------------------------------------------*\
@@ -55,7 +55,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 
     $width: $value * $column-width + ($value ) * $gutter-width;
     @return percentage($width, $grid-width);
-  
+
 }
 
 
@@ -118,7 +118,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 
     @if $old-ie == true {
 
-        .old-ie & { 
+        .old-ie & {
 
             @content
 
@@ -218,7 +218,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 }
 
 .flex--start {
-    
+
     justify-content: flex-start;
 
     .col {
@@ -262,7 +262,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 
     // defualt columns class required to be altered
     .col {
-        
+
         flex-grow: 0;
 
     }
@@ -298,7 +298,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
     align-items: flex-end;
 
     .col {
-        
+
         flex-grow: 1;
 
     }
@@ -311,7 +311,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 
     // defualt columns class required to be altered
     .col {
-        
+
         flex-grow: 0;
         flex-shrink: 1;
 
@@ -325,7 +325,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 
     // defualt columns class required to be altered
     .col {
-        
+
         flex-grow: 0;
         flex-shrink: 1;
 
@@ -352,7 +352,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 
         float: left;
         display: block;
-    
+
     }
 }
 
@@ -376,6 +376,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
     .col--#{$i} {
 
         flex-basis: column($i);
+        max-width: column($i);
 
         @include old-ie {
 
@@ -391,13 +392,13 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 @for $i from 1 through $columns {
 
     .col__offset--#{$i} {
-        
+
         margin-left: column($i);
 
     }
 
 }
-  
+
 
 
 // cycles through $columns and
@@ -409,9 +410,10 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
         .col__md--#{$i} {
 
             flex-basis: column($i);
+            max-width: column($i);
 
             @include old-ie {
-                
+
                 width: column($i);
 
             }
@@ -419,7 +421,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
         }
 
     }
-  
+
 }
 
 
@@ -433,6 +435,7 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
         .col__lg--#{$i} {
 
             flex-basis: column($i);
+            max-width: column($i);
 
             @include old-ie {
 
