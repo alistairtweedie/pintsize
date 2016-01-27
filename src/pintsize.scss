@@ -1,0 +1,433 @@
+/*-------------------------------------------------------*\
+
+    Pintsize
+    Url: http://www.pintsize.io
+    Github: https://github.com/alistairtweedie/Pintsize/
+
+/*-------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------*\
+    #grid config
+\*-------------------------------------------------------*/
+
+// Number of columns
+$columns: 12 !default;
+
+//Width of a column in pixels
+$column-width: 65px !default;
+
+//Width of a gutter in pixels
+$gutter-width: 20px !default;
+
+//Fixed gutter width?
+//False will generate a flexible gutter width.
+$fixed-gutter-size: true !default;
+
+//Medium breakpoint to respond to
+$md: 40em;
+
+//Large breakpoint to respond to
+$lg: 64em;
+
+//Provide fallbacks for IE9 and IE8?
+//This generates a lot more css
+$old-ie: false !default;
+
+
+/*-------------------------------------------------------*\
+    #grid calculations
+\*-------------------------------------------------------*/
+
+//percentage function
+@function percentage($size, $width) {
+
+    @return $size / $width * 100%;
+
+}
+
+$grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
+
+
+//calc column width
+@function column($value) {
+
+    $width: $value * $column-width + ($value ) * $gutter-width;
+    @return percentage($width, $grid-width);
+
+}
+
+
+/*-------------------------------------------------------*\
+    #clearfix mixin
+\*-------------------------------------------------------*/
+
+@mixin clearfix() {
+
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    & {
+        *zoom: 1;
+    }
+
+}
+
+/*-------------------------------------------------------*\
+    #box sizing mixin
+\*-------------------------------------------------------*/
+
+@mixin box-sizing {
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+
+/*-------------------------------------------------------*\
+    #media query mixin
+\*-------------------------------------------------------*/
+
+@mixin respond-to($point) {
+
+    @media (min-width: $point) {
+
+        @content;
+
+    }
+
+}
+
+/*-------------------------------------------------------*\
+    #older IE mixin
+    - support for IE9 and IE8.
+    - $old-ie in grid config must be true
+\*-------------------------------------------------------*/
+
+@mixin old-ie {
+
+    @if $old-ie == true {
+
+        .old-ie & {
+
+            @content
+
+        }
+
+    }
+
+}
+
+/*-------------------------------------------------------*\
+    #gutter mixin
+    - If $fixed-gutter-size is set to true this will output
+    the $gutter-width as a fixed value and not percentage
+\*-------------------------------------------------------*/
+
+
+@mixin gutter-output {
+
+    @if $fixed-gutter-size == true {
+
+        padding-left: $gutter-width / 2;
+        padding-right: $gutter-width / 2;
+
+    }
+
+    @else {
+
+        padding-left: percentage($gutter-width, $grid-width) / 2;
+        padding-right: percentage($gutter-width, $grid-width) / 2;
+    }
+
+}
+
+
+/*-------------------------------------------------------*\
+    #The grid
+\*-------------------------------------------------------*/
+
+.container {
+
+    max-width: $grid-width; // Calculated from config
+    margin: 0 auto;
+    @include box-sizing;
+
+    @include old-ie {
+
+        @include clearfix;
+
+    }
+
+}
+
+// wrapper class for .col classes
+.flex {
+
+    display: flex;
+    flex-flow: row wrap;
+
+    @include old-ie {
+
+        @include clearfix;
+
+    }
+}
+
+
+/*-------------------------------------------------------*\
+    #flexbox helper classes
+    - docs for browser support to be provided
+\*-------------------------------------------------------*/
+
+.flex--auto {
+
+    .col {
+
+        flex-grow: 1;
+
+    }
+
+}
+
+.flex--start {
+
+    justify-content: flex-start;
+
+    .col {
+
+        flex-grow: 0;
+
+    }
+
+}
+
+.flex--center {
+
+    justify-content: center;
+
+    .col {
+
+        flex-grow: 0;
+
+    }
+
+
+    // IE 8 and IE 9 fallback
+    @include old-ie {
+
+        .flex--center {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+    }
+
+}
+
+
+
+.flex--end {
+
+    justify-content: flex-end;
+
+    // defualt columns class required to be altered
+    .col {
+
+        flex-grow: 0;
+
+    }
+}
+
+.flex--top {
+
+    align-items: flex-start;
+}
+
+.flex--middle {
+
+    align-items: center;
+}
+
+.flex--baseline {
+
+    align-items: baseline;
+}
+
+.flex--wrap {
+
+    flex-wrap: wrap;
+}
+
+.flex--row {
+
+    flex-direction: row;
+}
+
+.flex--bottom {
+
+    align-items: flex-end;
+
+    .col {
+
+        flex-grow: 1;
+
+    }
+}
+
+
+.flex--around {
+
+    justify-content: space-around;
+
+    // defualt columns class required to be altered
+    .col {
+
+        flex-grow: 0;
+        flex-shrink: 1;
+
+    }
+
+}
+
+.flex--between {
+
+    justify-content: space-between;
+
+    // defualt columns class required to be altered
+    .col {
+
+        flex-grow: 0;
+        flex-shrink: 1;
+
+    }
+}
+
+.flex--reverse {
+
+    flex-direction: row-reverse;
+}
+
+
+// defualt columns class - auto flex
+.col {
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    max-width: 100%;
+    @include box-sizing;
+    @include gutter-output;
+
+    @include old-ie {
+
+        float: left;
+        display: block;
+
+    }
+}
+
+
+.col--first {
+
+    order: -1;
+
+}
+
+.col--last {
+
+    order: 1;
+}
+
+
+
+// cycles through $columns and calculates widths
+@for $i from 1 through $columns {
+
+    .col--#{$i} {
+
+        flex-basis: column($i);
+        max-width: column($i);
+
+        @include old-ie {
+
+            width: column($i);
+
+        }
+
+    }
+
+}
+
+// cycles through $columns and calculates offsets
+@for $i from 1 through $columns {
+
+    .col__offset--#{$i} {
+
+        margin-left: column($i);
+
+    }
+
+}
+
+
+
+// cycles through $columns and
+// generates medium breakpoint column classes
+@include respond-to($md)  {
+
+    @for $i from 1 through $columns {
+
+        .col__md--#{$i} {
+
+            flex-basis: column($i);
+            max-width: column($i);
+
+            @include old-ie {
+
+                width: column($i);
+
+            }
+
+        }
+
+    }
+
+}
+
+
+// cycles through $columns and
+// generates large breakpoint column classes
+@include respond-to($lg)  {
+
+
+    @for $i from 1 through $columns {
+
+        .col__lg--#{$i} {
+
+            flex-basis: column($i);
+            max-width: column($i);
+
+            @include old-ie {
+
+                width: column($i);
+
+            }
+
+        }
+
+    }
+
+}
