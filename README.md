@@ -13,7 +13,7 @@ It's easy to get started. Just follow the steps below.
 
 ###1.Download
 
-* [Download the rebuild release](https://github.com/alistairtweedie/pintsize/archive/rebuild.zip).
+* [Download Pintsize](https://github.com/alistairtweedie/pintsize/archive/master.zip).
 
 
 ###2. Install
@@ -25,7 +25,7 @@ Run Node Package Manager
 
 ###3. Configure
 
-Copy the pixel grid values used in your design into _pintsize.scss file. Done!
+Copy the pixel grid values used in your design into _pintsize.scss file.
 
 	$columns: 12;
     $column-width: 65px;
@@ -34,16 +34,16 @@ Copy the pixel grid values used in your design into _pintsize.scss file. Done!
 
 ###4. Build
 
-Run Gulp
+Run Gulp to build the grid
 
 	$ gulp
 
- 
+
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 @alistairtweedie
+Copyright (c) 2016 @alistairtweedie
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
