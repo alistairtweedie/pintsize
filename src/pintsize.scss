@@ -193,25 +193,8 @@ $grid-width: ($columns * $column-width) + (($columns ) * $gutter-width);
 .flex--auto {
 
     .col {
+
         flex-grow: 1;
-
-        // &[class*="col--"]  {
-
-        //     flex-grow: 0;
-
-        //     &[class$="--first"] {
-
-        //         flex-grow: 1;
-
-        //     }
-
-        // }
-        // &[class$="--first"],
-        // &[class$="--last"]
-        //  {
-        //     flex-grow: 1;
-        // }
-
 
     }
 

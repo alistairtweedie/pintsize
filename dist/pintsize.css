@@ -25,7 +25,7 @@
 /*-------------------------------------------------------*    #The grid
 \*-------------------------------------------------------*/
 .container {
-  max-width: 1080px;
+  max-width: 1020px;
   margin: 0 auto;
   box-sizing: border-box; }
 
@@ -168,8 +168,8 @@
           flex-basis: auto;
   max-width: 100%;
   box-sizing: border-box;
-  padding-left: 12.5px;
-  padding-right: 12.5px; }
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .col--first {
   -webkit-box-ordinal-group: 0;
