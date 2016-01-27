@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 
 // Build Pintsize scss into css
-gulp.task('default', function(){
+gulp.task('build', function(){
   gulp.src('./src/pintsize.scss')
       .pipe(sass())
       .pipe(size({gzip: false, showFiles: true, title:'un-prefixed css'}))
