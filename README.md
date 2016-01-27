@@ -36,7 +36,7 @@ Copy the pixel grid values used in your design into _pintsize.scss file.
 
 Run Gulp to build the grid
 
-	$ gulp
+	$ gulp build
 
 
 ## License
