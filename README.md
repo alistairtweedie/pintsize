@@ -6,24 +6,24 @@
 
 A simple and modern flexible grid system
 
-##Get started
+## Get started
 It's easy to get started. Just follow the steps below.
 
 
-###1.Download
+### 1.Download
 
 * [Download Pintsize](https://github.com/alistairtweedie/pintsize/archive/master.zip).
 
 
 
-###2. Install
+### 2. Install
 
 Run Node Package Manager
 
 	$ npm install
 
 
-###3. Configure
+### 3. Configure
 
 Copy the pixel grid values used in your design into _pintsize.scss file.
 
@@ -32,7 +32,7 @@ Copy the pixel grid values used in your design into _pintsize.scss file.
     $gutter-width: 20px;
 
 
-###4. Build
+### 4. Build
 
 Run Gulp to build the grid
 
